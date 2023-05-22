@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+window.addEventListener('DOMContentLoaded', function() {
   
   const locationswitcher = document.querySelectorAll('.uncommon-location-switcher');
   
