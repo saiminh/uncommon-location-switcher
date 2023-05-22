@@ -1,0 +1,65 @@
+  .uncommon-location-switcher {
+    position: relative;
+    
+    @media screen and (max-width: 768px) {
+      padding-top: 72.5vw;
+    }
+  }
+  .uncommon-location-switcher-location-text {
+    width: 33.333%;
+    font-size: var(--wp--preset--font-size--body-s);
+    padding: 1em;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+      width: 100%!important;      
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 1em;
+      bottom: 1em;
+      left: 0;
+      border-left: 1px solid;
+    }
+
+    .location-active & {
+      background-color: var(--wp--preset--color--pigment-purple);
+      color: var(--wp--preset--color--contrast);
+
+      &:before {
+        border-left: none;
+      }
+    }
+  }
+  h3.uncommon-location-switcher-location-title {
+    font-size: var(--wp--preset--font-size--body-m);
+  }
+  .uncommon-location-switcher-location-image {
+    opacity: 0;
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    transform: rotate(-5deg);
+    width: 50%;
+    aspect-ratio: 4/3;
+
+    @media screen and (max-width: 768px) {
+      top: 0;
+      width: 100%;
+    }
+
+    .location-active & {
+      opacity: 1;
+    }
+    
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
